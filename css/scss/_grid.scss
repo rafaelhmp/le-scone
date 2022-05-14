@@ -64,3 +64,18 @@ $s-device: 480px;
 [class^="grid-"] {
   @include grid-structure;
 }
+
+// Gera as classes de offset
+
+@for $i from 1 through $cols {
+  .offset-#{$i} {
+    margin-left: grid($i, offset);
+    @extend %offset;
+  }
+}
+
+@include d(s) {
+  %offset {
+    margin-left: 0px;
+  }
+}
