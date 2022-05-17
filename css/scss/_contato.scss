@@ -48,4 +48,29 @@ input.button {
   display: block;
   width: 200px;
   padding: 5px;
+  @include box-shadow(5px 5px 0 -2px $bege-medio,5px 5px 0 0 $bege-escuro);
+  transition: .3s;
+  &:hover {
+    @include box-shadow(3px 3px 0 -2px $bege-medio,3px 3px 0 0 $bege-escuro);
+  }
+}
+
+.contato-info {
+  color: $bege-escuro;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  @include d(l) {
+  text-align: right;
+  float: right;
+  margin-top: -3em;
+  }
+}
+
+.contato-mapa {
+  display: block;
+  clear: both;
+  @include box-shadow(0 0 0 10px $bege-medio);
+  img {
+    width: 100%;
+  }
 }
